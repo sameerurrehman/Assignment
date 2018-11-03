@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>-->
+</head>
+<body>
+    <script>
+var earning, taxRate, initialTax, finalTax;
+var lowTaxCutOff = 25000;
+var highTaxCutOff = 75000;
+var lowTaxRate = .10;
+var midTaxRate = .20;
+var highTaxRate = .35;
+var disTaxRate = 0;
+var dependentsRate = .10;
+var deduction = 0;
+earning = prompt("what is your earning?", "10000");
+if (earning < lowTaxCutOff){        
+       taxRate = disTaxRate;
+    }
+    else{
+        taxRate = lowTaxRate;
+    }
+     if(earning > highTaxCutOff){
+     taxRate = highTaxRate;
+    }
+
+    else {
+        taxRate = midTaxRate;
+    }
+    initialTax = earning * taxRate;
+
+        deduction = initialTax * dependentsRate;
+
+    finalTax = initialTax - deduction;
+
+document.write("your earning is:"+ earning);
+document.write("<br>your earning tax deduction amount:"+deduction);
+
+
+
+
+
+           //STACk eg:1 & 2
+ var a = [];
+     a.push(1);
+     a.push(2);
+     a.push(3);
+     a.push(4);
+     a.push(5);
+     console.log(a);
+     a.pop();
+     a.pop();
+     console.log(a);
+
+     
+var stack = function(){
+    this.storage = [];
+    this.count = 0;
+}
+stack.prototype.push = function(value){
+    this.storage[this.count] = value;
+    this.count++;
+}
+stack.prototype.pop = function(){
+    this.count && this.count --
+    var upDate = this.storage[this.count];
+    delete this.storage[this.count];
+    return upDate;
+}
+stack.prototype.stackSize = function(){
+    return this.count;
+}
+    </script>
+</body>
+</html>
